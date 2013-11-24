@@ -20,6 +20,7 @@ class Monitoring
 		
 		while ($line = $this->db->fetchArray() )
 		{
+			print $line[0];
 			print  $line['Name'] . "<br>";
 		}
 		
