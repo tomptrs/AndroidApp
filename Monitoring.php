@@ -21,7 +21,7 @@ class Monitoring
 		while ($line = $this->db->fetchArray() )
 		{
 			print $line[0];
-			print  $line['Name'] . "<br>";
+			print  $line[1] . " " . $line[2] . "<br>";
 		}
 		
 		
