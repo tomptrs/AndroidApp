@@ -21,7 +21,10 @@
   <body>
 
 <?php
-
+require "Monitoring.php";
+$m = new Monitoring();			
+			
+print $m->GetData();
 print "Hallo Tom Peeters.";
 ?>   
    
