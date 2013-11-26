@@ -5,7 +5,12 @@
 require "Monitoring.php";
 $m = new Monitoring();			
 			
-print $m->GetData();
+header('Content-Type: application/json');
+//$json = array();
+echo $m->GetData();
+
+
+//TRY TO SEND JSON DATA!
 
 ?>   
    

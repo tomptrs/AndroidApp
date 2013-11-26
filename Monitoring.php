@@ -17,13 +17,14 @@ class Monitoring
 		$sql = "SELECT * FROM SPELERS";
 		$this->db->query($sql);		
 		
-		
+		$json = array();
 		while ($line = $this->db->fetchArray() )
 		{
-			print $line[0];
-			print  $line[1] . " " . $line[2] . "<br>";
+			$json[] = $line;
+//			print $line[0];
+//			print  $line[1] . " " . $line[2] . "<br>";
 		}
-		
+			return json_encode($json);
 		
 
 	}
