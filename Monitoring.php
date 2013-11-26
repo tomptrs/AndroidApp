@@ -24,6 +24,7 @@ class Monitoring
 //			print $line[0];
 //			print  $line[1] . " " . $line[2] . "<br>";
 		}
+			print $json;
 			return json_encode($json);
 		
 
