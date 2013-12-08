@@ -1,4 +1,6 @@
 <?php
-$consumer_key = '<PLACE YOUR CONSUMER KEY HERE>';
-$consumer_secret = '<PLACE YOUR CONSUMER SECRET KEY HERE>';
+$consumer_key = 'ueAwvpqg1WbuRcAMzEThjA';
+$consumer_secret = 'EVOFX14JVhspzSeBMlUdtViQb6iYQ2F9P9vZyCT0';
+
+
 ?>
