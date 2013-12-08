@@ -11,14 +11,7 @@ include 'lib/secret.php';
 
 
 
-$twitterObj = new EpiTwitter($consumer_key, $consumer_secret);
-$oauth_token = $_GET['oauth_token'];
 
-echo $twitterOjb;
-echo $oauth_token;
-
-	
-	  	$url = $twitterObj->getAuthorizationUrl();
   		echo "<div style='width:200px;margin-top:200px;margin-left:auto;margin-right:auto'>";
         echo "<a href='$url'>Sign In with Twitter</a>";
         echo "</div>";
