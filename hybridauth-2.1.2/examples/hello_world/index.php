@@ -7,6 +7,7 @@
 
 	try{
 		// hybridauth EP
+		print $config;
 		$hybridauth = new Hybrid_Auth( $config );
 
 		// automatically try to login with Twitter
