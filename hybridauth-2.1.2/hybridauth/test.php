@@ -1,9 +1,11 @@
 <?php
 
+print "hallo";
 
 require_once( "Hybrid/Auth.php" );
  $config   = dirname(__FILE__) . 'Hybrid/config.php';
 
+ print $config;
  
 $hybridauth = new Hybrid_Auth( $config );
 
