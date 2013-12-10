@@ -12,12 +12,14 @@
   try{
   	// create an instance for Hybridauth with the configuration file path as parameter
   	$hybridauth = new Hybrid_Auth( $config );
+	print $hybridauth;
   
   	// try to authenticate the user with twitter, 
   	// user will be redirected to Twitter for authentication, 
   	// if he already did, then Hybridauth will ignore this step and return an instance of the adapter
   	$twitter = $hybridauth->authenticate( "Twitter" );  
- 
+	print $twitter;
+ /*
   	// get the user profile 
   	$twitter_user_profile = $twitter->getUserProfile();
   
@@ -37,7 +39,7 @@
   	// disconnect the user ONLY form twitter
   	// this will not disconnect the user from others providers if any used nor from your application
   	echo "Logging out.."; 
-  	$twitter->logout(); 
+  	$twitter->logout(); */
   }
   catch( Exception $e ){  
   	// Display the recived error, 
