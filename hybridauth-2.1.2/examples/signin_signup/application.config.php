@@ -7,7 +7,7 @@
 	// database config
 	$database_host = "localhost"; 
 	$database_user = "root";
-	$database_pass = "";
+	$database_pass = "root";
 	$database_name = "hybridauth_test";
 
 	$database_link = @ mysql_connect( $database_host, $database_user, $database_pass );
