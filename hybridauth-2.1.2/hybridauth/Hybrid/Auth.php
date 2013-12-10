@@ -46,13 +46,15 @@ class Hybrid_Auth
 	*/
 	public static function initialize( $config )
 	{
-		print "init";
+		
+		
 		if( ! is_array( $config ) && ! file_exists( $config ) ){
 			throw new Exception( "Hybriauth config does not exist on the given path.", 1 );
 		}
 
 		if( ! is_array( $config ) ){
 			$config = include $config;
+			print $config;
 		}
 
 		// build some need'd paths
@@ -207,6 +209,8 @@ class Hybrid_Auth
 	*/
 	public static function authenticate( $providerId, $params = NULL )
 	{
+		print "TRY TO AUTHENTICATE";
+		
 		Hybrid_Logger::info( "Enter Hybrid_Auth::authenticate( $providerId )" );
 
 		// if user not connected to $providerId then try setup a new adapter and start the login process for this provider
