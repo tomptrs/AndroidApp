@@ -11,7 +11,7 @@ $hybridauth = new Hybrid_Auth( $config );
 
 // hybridauth will try to authenticate the user, then return an instance of Twitter adapter
 $twitter_adapter = $hybridauth->authenticate( "Twitter" );  
- 
+ print $twitter_adapter;
 // get the user profile 
 $twitter_user_profile = $twitter_adapter->getUserProfile();
 print $hybridauth;
