@@ -46,6 +46,7 @@ class Hybrid_Auth
 	*/
 	public static function initialize( $config )
 	{
+		print "init";
 		if( ! is_array( $config ) && ! file_exists( $config ) ){
 			throw new Exception( "Hybriauth config does not exist on the given path.", 1 );
 		}
