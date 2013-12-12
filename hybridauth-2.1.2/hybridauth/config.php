@@ -11,7 +11,7 @@
 
 return 
 	array(
-		"base_url" => "http://localhost/hybridauth-git/hybridauth/", 
+		"base_url" => "http://ec2-54-201-103-23.us-west-2.compute.amazonaws.com/AndroidApp/hybridauth-2.1.2/hybridauth/", 
 
 		"providers" => array ( 
 			// openid providers
