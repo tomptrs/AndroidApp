@@ -5,6 +5,7 @@
    	$config = dirname(__FILE__) . '/Hybrid/config.php';
     require_once( "/Hybrid/Auth.php" );
 
+	print $config;
 	try{
 		// hybridauth EP
 		print $config;
