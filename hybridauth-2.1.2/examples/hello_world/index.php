@@ -26,6 +26,17 @@
 
 		// or even inspect it
 		echo "<pre>" . print_r( $user_profile, true ) . "</pre><br />";
+		
+		 // try to authenticate with twitter
+  
+ 
+  // grab the user's friends list
+  $user_contacts = $twitter->getUserContacts();
+ 
+  // iterate over the user friends list
+  foreach( $user_contacts as $contact ){
+     echo $contact->displayName . " " . $contact->profileURL . "<hr />";
+  }
 
 		// uncomment the line below to get user friends list
 		// $twitter->getUserContacts();
