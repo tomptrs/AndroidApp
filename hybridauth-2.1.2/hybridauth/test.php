@@ -37,7 +37,7 @@
  print "try to get contacts";
   // iterate over the user friends list
   foreach( $user_contacts as $contact ){
-     echo $contact->displayName . " " . $contact->profileURL . "<hr />";
+     echo $contact->displayName . " " . $contact->profileURL ." " . "<img src='". $contact->photoURL ."'> " ."<hr />";
   }
 		}
 		catch( Exception $e ){  
