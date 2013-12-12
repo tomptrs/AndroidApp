@@ -72,6 +72,14 @@ HR {
 	if( ! empty( $provider ) && $hybridauth->isConnectedWith( $provider ) )
 	{
 		$return_to = $return_to . ( strpos( $return_to, '?' ) ? '&' : '?' ) . "connected_with=" . $provider ;
+		
+		 // grab the user's friends list
+  $user_contacts = $adapter->getUserContacts();
+ 
+  // iterate over the user friends list
+  foreach( $user_contacts as $contact ){
+     echo $contact->displayName . " " . $contact->profileURL . "<hr />";
+  }
 ?>
 <script language="javascript"> 
 	if(  window.opener ){
