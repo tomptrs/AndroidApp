@@ -38,7 +38,7 @@
 
 		// Display the recived error, 
 		// to know more please refer to Exceptions handling section on the userguide
-			print "exception";
+			print "exception " . $e->getCode();
 		} 
 	
 	?>
