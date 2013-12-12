@@ -31,7 +31,14 @@
 
 		// or even inspect it
 		echo "<pre>" . print_r( $user_profile, true ) . "</pre><br />";
-		
+		 // grab the user's friends list
+  $user_contacts = $twitter->getUserContacts();
+ print $user_contacts;
+ print "try to get contacts";
+  // iterate over the user friends list
+  foreach( $user_contacts as $contact ){
+     echo $contact->displayName . " " . $contact->profileURL . "<hr />";
+  }
 		}
 		catch( Exception $e ){  
 		// In case we have errors 6 or 7, then we have to use Hybrid_Provider_Adapter::logout() to 
