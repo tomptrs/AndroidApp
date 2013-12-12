@@ -32,7 +32,8 @@
  
   // grab the user's friends list
   $user_contacts = $twitter->getUserContacts();
- 
+ print $user_contacts;
+ print "try to get contacts";
   // iterate over the user friends list
   foreach( $user_contacts as $contact ){
      echo $contact->displayName . " " . $contact->profileURL . "<hr />";
