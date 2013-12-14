@@ -1,6 +1,6 @@
 <?php
 	session_start(); 
-
+	header('Access-Control-Allow-Origin: *');
 	// config and includes
    	$config = dirname(__FILE__) . '/config.php';
     require_once( "Hybrid/Auth.php" );
