@@ -5,14 +5,10 @@
    	$config = dirname(__FILE__) . '/config.php';
     require_once( "Hybrid/Auth.php" );
 	
-
-	print $config;
-	
-	print "tom";
 	
 	try{
 		// hybridauth EP
-		print $config;
+
 		$hybridauth = new Hybrid_Auth( $config );
 
 		// automatically try to login with Twitter
