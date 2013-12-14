@@ -31,7 +31,7 @@
 	{
 	
 		var u = "hybridauth-2.1.2\\hybridauth\\test.php";
-		alert(u);
+		
 		//AJAX
 		$.ajax(
 		{
@@ -46,7 +46,11 @@
 				alert();
 				
 				
-  			}
+  			},
+			 error: function (xhr, ajaxOptions, thrownError) {
+				alert(xhr.status);
+				alert(thrownError);
+			}
 			})
 	});
 	</script>
