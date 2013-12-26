@@ -21,11 +21,11 @@ class Monitoring
 		while ($line = $this->db->fetchArray() )
 		{
 			$json[] = $line;
-			print $line;
+			//print $line;
 //			print $line[0];
 //			print  $line[1] . " " . $line[2] . "<br>";
 		}
-			print $json[0];
+			//print $json[0];
 			return json_encode($json);
 		
 

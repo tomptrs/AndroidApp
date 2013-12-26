@@ -7,8 +7,9 @@ $m = new Monitoring();
 			
 header('Content-Type: application/json');
 //$json = array();
- $m->GetData();
+$str = $m->GetData();
 
+print $str;
 
 //TRY TO SEND JSON DATA!
 
