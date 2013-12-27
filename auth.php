@@ -5,8 +5,8 @@
    	$config = dirname(__FILE__) . '/hybridauth-2.1.2/hybridauth/config.php';
 	
 	echo $config;
-    
-	require_once( "/hybridauth-2.1.2/hybridauth/Hybrid/Auth.php" );
+    $req = dirname(__FILE__) . "/hybridauth-2.1.2/hybridauth/Hybrid/Auth.php";
+	require_once($req );
 	
 	echo "test";
 	try{
