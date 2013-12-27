@@ -3,15 +3,17 @@
 	header('Access-Control-Allow-Origin: *');
 	// config and includes
    	$config = dirname(__FILE__) . '/hybridauth-2.1.2/hybridauth/config.php';
+	
 	echo $config;
-    require_once( "/hybridauth-2.1.2/hybridauth/Hybrid/Auth.php" );
+    
+	require_once( "/hybridauth-2.1.2/hybridauth/Hybrid/Auth.php" );
 	
-	
+	echo "test";
 	try{
 		// hybridauth EP
 
 		$hybridauth = new Hybrid_Auth( $config );
-
+echo $hybridauth;
 		// automatically try to login with Twitter
 		$twitter = $hybridauth->authenticate( "Twitter" );
 
