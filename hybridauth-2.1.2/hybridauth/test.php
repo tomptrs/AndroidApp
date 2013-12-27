@@ -25,14 +25,7 @@
 		echo "As: <b>{$user_profile->displayName}</b><br />";
 		echo "And your provider user identifier is: <b>{$user_profile->identifier}</b><br />";  
 
-		/*
-		INSERT THE DISPLAYNAME IN MY DATABASE GOCHA
-		*/
-		require "Monitoring.php";
-		$m = new Monitoring();			
-			
-
-		$str = $m->InsertUserInDB($user_profile->displayName);
+		
 		
 		// or even inspect it
 		echo "<pre>" . print_r( $user_profile, true ) . "</pre><br />";
