@@ -34,6 +34,7 @@ class Monitoring
 	{
 		//INSERT INTO `gocha`.`User` (`Name`, `ID`) VALUES (\'tom\', NULL);
 		$sql = "insert into User('Name','ID') VALUES ('{$name}',NULL);	
+		$this->db->query($sql);	
 	}
 	
 	
