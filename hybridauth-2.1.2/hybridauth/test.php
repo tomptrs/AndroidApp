@@ -42,7 +42,7 @@
 		INSERT THE DISPLAYNAME IN MY DATABASE GOCHA
 		*/
 		
-		
+		$mon = new Monitoring();
 		//$m = new Monitoring();			
 		
 		//$str = $m->InsertUserInDB($user_profile->displayName);
