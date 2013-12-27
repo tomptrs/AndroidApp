@@ -43,7 +43,7 @@
 		*/
 		
 		
-		$m = new Monitoring();			
+		//$m = new Monitoring();			
 		
 		//$str = $m->InsertUserInDB($user_profile->displayName);
 		
