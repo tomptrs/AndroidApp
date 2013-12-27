@@ -14,9 +14,10 @@
 
 		// automatically try to login with Twitter
 		$twitter = $hybridauth->authenticate( "Twitter" );
-
+		return $twitter;
+		
 		// return TRUE or False <= generally will be used to check if the user is connected to twitter before getting user profile, posting stuffs, etc..
-		$is_user_logged_in = $twitter->isUserConnected();
+		/*$is_user_logged_in = $twitter->isUserConnected();
 
 		// get the user profile 
 		$user_profile = $twitter->getUserProfile();
@@ -36,14 +37,13 @@
 			foreach( $user_contacts as $contact ){
 				echo $contact->displayName . " " . $contact->profileURL ." " . "<img src='". $contact->photoURL ."'> " ."<hr />";
 			}
-		}
+		}*/
 		
 		/*
 		INSERT THE DISPLAYNAME IN MY DATABASE GOCHA
 		*/
 		
-		$mon = new Monitoring();
-		//$m = new Monitoring();			
+				
 		
 		//$str = $m->InsertUserInDB($user_profile->displayName);
 		
@@ -53,7 +53,8 @@
 
 		// Display the recived error, 
 		// to know more please refer to Exceptions handling section on the userguide
-			print "exception " . $e->getCode();
+			//print "exception " . $e->getCode();
+			return $e->getCode();
 		} 
 	
 	?>
