@@ -9,7 +9,8 @@ class Monitoring
 	
 	public function  __construct()
 	{
-		$this->db = new Databank();		
+		$this->db = new Databank();	
+				echo "db constructed";
 	}
 	
 	public function GetData()
