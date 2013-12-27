@@ -25,16 +25,25 @@
 		echo "As: <b>{$user_profile->displayName}</b><br />";
 		echo "And your provider user identifier is: <b>{$user_profile->identifier}</b><br />";  
 
+		/*
+		INSERT THE DISPLAYNAME IN MY DATABASE GOCHA
+		*/
+		require "Monitoring.php";
+		$m = new Monitoring();			
+			
+
+		$str = $m->InsertUserInDB($user_profile->displayName);
+		
 		// or even inspect it
 		echo "<pre>" . print_r( $user_profile, true ) . "</pre><br />";
 		 // grab the user's friends list
-  $user_contacts = $twitter->getUserContacts();
- print $user_contacts;
- print "try to get contacts";
-  // iterate over the user friends list
-  foreach( $user_contacts as $contact ){
-     echo $contact->displayName . " " . $contact->profileURL ." " . "<img src='". $contact->photoURL ."'> " ."<hr />";
-  }
+		$user_contacts = $twitter->getUserContacts();
+		print $user_contacts;
+		print "try to get contacts";
+		// iterate over the user friends list
+			foreach( $user_contacts as $contact ){
+				echo $contact->displayName . " " . $contact->profileURL ." " . "<img src='". $contact->photoURL ."'> " ."<hr />";
+			}
 		}
 		catch( Exception $e ){  
 		// In case we have errors 6 or 7, then we have to use Hybrid_Provider_Adapter::logout() to 
