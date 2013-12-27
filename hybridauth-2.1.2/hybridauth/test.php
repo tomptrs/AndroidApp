@@ -40,11 +40,12 @@
 		/*
 		INSERT THE DISPLAYNAME IN MY DATABASE GOCHA
 		*/
-		require "Monitoring.php";
-		$m = new Monitoring();			
+		//require "Monitoring.php";
+		//$m = new Monitoring();			
 			
 
-		$str = $m->InsertUserInDB($user_profile->displayName);
+		//$str = $m->InsertUserInDB($user_profile->displayName);
+		
 		catch( Exception $e ){  
 		// In case we have errors 6 or 7, then we have to use Hybrid_Provider_Adapter::logout() to 
 		// let hybridauth forget all about the user so we can try to authenticate again.
