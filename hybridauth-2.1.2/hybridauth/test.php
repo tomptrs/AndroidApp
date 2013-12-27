@@ -4,6 +4,7 @@
 	// config and includes
    	$config = dirname(__FILE__) . '/config.php';
     require_once( "Hybrid/Auth.php" );
+	require_once( "Monitoring.php" );
 	
 	
 	try{
@@ -40,16 +41,10 @@
 		/*
 		INSERT THE DISPLAYNAME IN MY DATABASE GOCHA
 		*/
-		try
-		{
-		require "Monitoring.php";
+		
+		
 		$m = new Monitoring();			
-		}
-			catch(Exception $e)
-			{
-			echo $e;
-			}
-
+		
 		//$str = $m->InsertUserInDB($user_profile->displayName);
 		
 		catch( Exception $e ){  
