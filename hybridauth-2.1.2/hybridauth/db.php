@@ -6,16 +6,13 @@ class Databank
 	
 	public function __construct()
 	{
-		//mysql_connect("localhost","root","pba-nodejs");
-		//mysql_select_db("pbaea");
 		mysql_connect("localhost","root","root");
 		mysql_select_db("gocha");
 	}
 	
 	public function query($str)
 	{
-		$this->query = mysql_query($str);
-		
+		$this->query = mysql_query($str);		
 	}
 	
 	

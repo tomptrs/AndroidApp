@@ -40,9 +40,15 @@
 		/*
 		INSERT THE DISPLAYNAME IN MY DATABASE GOCHA
 		*/
+		try
+		{
 		require "Monitoring.php";
 		$m = new Monitoring();			
-			
+		}
+			catch(Exception $e)
+			{
+			echo $e;
+			}
 
 		//$str = $m->InsertUserInDB($user_profile->displayName);
 		
