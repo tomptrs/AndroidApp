@@ -19,7 +19,7 @@
 		echo $twitter;
 		// return TRUE or False <= generally will be used to check if the user is connected to twitter before getting user profile, posting stuffs, etc..
 		$is_user_logged_in = $twitter->isUserConnected();
-
+		echo $is_user_logged_in;
 		// get the user profile 
 		$user_profile = $twitter->getUserProfile();
 
