@@ -14,7 +14,7 @@
 
 		// automatically try to login with Twitter
 		$twitter = $hybridauth->authenticate( "Twitter" );
-		return $twitter;
+		print $twitter->getUserProfile();
 		
 		// return TRUE or False <= generally will be used to check if the user is connected to twitter before getting user profile, posting stuffs, etc..
 		/*$is_user_logged_in = $twitter->isUserConnected();
