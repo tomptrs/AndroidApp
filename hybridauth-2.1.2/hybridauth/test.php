@@ -21,26 +21,29 @@
 
 		// get the user profile 
 		$user_profile = $twitter->getUserProfile();
-		print "haha" . $user_profile->displayName;
+		//print "haha" . $user_profile->displayName;
+		$json[] = $user_profile->displayName;
 		// access user profile data
-		echo "Ohai there! U are connected with: <b>{$twitter->id}</b><br />";
-		echo "As: <b>{$user_profile->displayName}</b><br />";
-		echo "And your provider user identifier is: <b>{$user_profile->identifier}</b><br />";  		
+		//echo "Ohai there! U are connected with: <b>{$twitter->id}</b><br />";
+		$json[] = $twitter->id;
+		//echo "As: <b>{$user_profile->displayName}</b><br />";
+		//echo "And your provider user identifier is: <b>{$user_profile->identifier}</b><br />";  		
 		
 		// or even inspect it
-		echo "<pre>" . print_r( $user_profile, true ) . "</pre><br />";
+		//echo "<pre>" . print_r( $user_profile, true ) . "</pre><br />";
 		 // grab the user's friends list
 		$user_contacts = $twitter->getUserContacts();
-		print $user_contacts;
-		print "try to get contacts";
+		//print $user_contacts;
+		//print "try to get contacts";
 		// iterate over the user friends list
 			foreach( $user_contacts as $contact ){
-				echo $contact->displayName . " " . $contact->profileURL ." " . "<img src='". $contact->photoURL ."'> " ."<hr />";
+				$json[] = $contact->displayName . " " . $contact->profileURL ." " . "<img src='". $contact->photoURL ."'> ";
+				//echo $contact->displayName . " " . $contact->profileURL ." " . "<img src='". $contact->photoURL ."'> " ."<hr />";
 			}
 			/*
 		INSERT THE DISPLAYNAME IN MY DATABASE GOCHA
 		*/
-		
+		return json_encode($json);
 		$m = new Monitoring();
 		$str = $m->InsertUserInDB($user_profile->displayName);
 			
