@@ -33,7 +33,8 @@ class Monitoring
 	public function InsertUserInDB($name)
 	{
 		//INSERT INTO `gocha`.`User` (`Name`, `ID`) VALUES (\'tom\', NULL);
-		$sql = "INSERT INTO User (Name, ID) VALUES ('hihi', NULL);";	
+		$sql = "INSERT INTO User (Name, ID) VALUES ('hihi', NULL)";	
+		echo $sql;
 		$this->db->query($sql);	
 	}
 	
