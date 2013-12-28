@@ -15,17 +15,20 @@
 		// automatically try to login with Twitter
 		$twitter = $hybridauth->authenticate( "Twitter" );
 		$json = array();
-		
+		$tel = 0;
 		// return TRUE or False <= generally will be used to check if the user is connected to twitter before getting user profile, posting stuffs, etc..
 		$is_user_logged_in = $twitter->isUserConnected();
 
 		// get the user profile 
 		$user_profile = $twitter->getUserProfile();
 		//print "haha" . $user_profile->displayName;
-		$json[] = $user_profile->displayName;
+		$json[$tel] = $user_profile->displayName;
+		$tel++;
 		// access user profile data
 		//echo "Ohai there! U are connected with: <b>{$twitter->id}</b><br />";
-		$json[] = $twitter->id;
+		$json[$tel] = $twitter->id;
+		$tel++;
+		$json[$tel]  = $twitter->profileURL;
 		//echo "As: <b>{$user_profile->displayName}</b><br />";
 		//echo "And your provider user identifier is: <b>{$user_profile->identifier}</b><br />";  		
 		
@@ -36,17 +39,17 @@
 		//print $user_contacts;
 		//print "try to get contacts";
 		// iterate over the user friends list
-			foreach( $user_contacts as $contact ){
-				$json[] = $contact->displayName . " " . $contact->profileURL ." " . "<img src='". $contact->photoURL ."'> ";
+		//	foreach( $user_contacts as $contact ){
+				//$json[] = $contact->displayName . " " . $contact->profileURL ." " . "<img src='". $contact->photoURL ."'> ";
 				//echo $contact->displayName . " " . $contact->profileURL ." " . "<img src='". $contact->photoURL ."'> " ."<hr />";
-			}
+			//}
 			/*
 		INSERT THE DISPLAYNAME IN MY DATABASE GOCHA
 		*/
-		return json_encode($json);
+		
 		$m = new Monitoring();
 		$str = $m->InsertUserInDB($user_profile->displayName);
-			
+			return json_encode($json);
 		}
 		
 		
