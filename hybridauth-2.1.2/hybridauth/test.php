@@ -23,10 +23,10 @@
 		//print "haha" . $user_profile->displayName;
 		
 		// access user profile data
-		echo "Ohai there! U are connected with: <b>{$twitter->id}</b><br />";
+		//echo "Ohai there! U are connected with: <b>{$twitter->id}</b><br />";
 		
-		echo "As: <b>{$user_profile->displayName}</b><br />";
-		echo "And your provider user identifier is: <b>{$user_profile->identifier}</b><br />";  		
+		//echo "As: <b>{$user_profile->displayName}</b><br />";
+		//echo "And your provider user identifier is: <b>{$user_profile->identifier}</b><br />";  		
 		
 		// or even inspect it
 		//echo "<pre>" . print_r( $user_profile, true ) . "</pre><br />";
@@ -37,7 +37,7 @@
 		// iterate over the user friends list
 			foreach( $user_contacts as $contact ){
 				//$json[] = $contact->displayName . " " . $contact->profileURL ." " . "<img src='". $contact->photoURL ."'> ";
-				echo $contact->displayName . " " . $contact->profileURL ." " . "<img src='". $contact->photoURL ."'> " ."<hr />";
+			//	echo $contact->displayName . " " . $contact->profileURL ." " . "<img src='". $contact->photoURL ."'> " ."<hr />";
 			}
 			/*
 		INSERT THE DISPLAYNAME IN MY DATABASE GOCHA
