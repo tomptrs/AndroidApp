@@ -33,7 +33,11 @@ class Monitoring
 	
 	public function InsertUserInDB($name,$photo)
 	{
+		echo "check user";
+	
 		CheckUser($name);
+		
+		echo "checked user";
 		//INSERT INTO `gocha`.`User` (`Name`, `ID`) VALUES (\'tom\', NULL);
 		$sql = "INSERT INTO User (Name, ID,photoURL) VALUES ('". $name ."', NULL, '".$photo."')";	
 		echo $sql;
