@@ -33,10 +33,23 @@ class Monitoring
 	
 	public function InsertUserInDB($name,$photo)
 	{
+		CheckUser($name);
 		//INSERT INTO `gocha`.`User` (`Name`, `ID`) VALUES (\'tom\', NULL);
 		$sql = "INSERT INTO User (Name, ID,photoURL) VALUES ('". $name ."', NULL, '".$photo."')";	
 		echo $sql;
 		$this->db->query($sql);	
+	}
+	
+	public function CheckUser($name)
+	{
+		$sql = "select count(*) from User where Name = ' " . $name . "'";
+		$this->db->query($sql);		
+		$line = $this->db->fetchArray();
+		if($line >0 )
+		{
+			//User in DB
+			echo "already available";
+		}
 	}
 	
 	
