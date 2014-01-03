@@ -45,6 +45,8 @@
 		*/
 		
 		$m = new Monitoring();
+		echo "in db";
+	
 		$str = $m->InsertUserInDB($user_profile->displayName,$user_profile->photoURL);
 			//return json_encode($json);
 		}
