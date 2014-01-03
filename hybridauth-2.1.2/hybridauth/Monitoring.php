@@ -35,7 +35,7 @@ class Monitoring
 	{
 		echo "check user";
 	
-		CheckUser($name);
+		CheckUser("test");
 		
 		echo "checked user";
 		//INSERT INTO `gocha`.`User` (`Name`, `ID`) VALUES (\'tom\', NULL);
