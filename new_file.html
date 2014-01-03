@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+		<title>new_file</title>
+		<script type="text/javascript">
+			
+	document.addEventListener("deviceready", onDeviceReady, false);
+	   
+	var b; 
+    function onDeviceReady() {
+    		canvas = document.getElementById('myCanvas');
+			ctx = canvas.getContext('2d');	
+			b = new ball(100, 10);
+        startWatch();
+    }
+   
+    
+    var x=0,y=0,vx=0,vy=0,ax=0,ay=0;
+    function onSuccess(acceleration) {         
+        //clear canvas
+		ctx.clearRect(0,0,500,500);			
+		//update data		
+		ax = acceleration.x * 3 ;
+		ay = acceleration.y * 3 ;
+		vx = vx + ax;
+		vy= vy+ay;
+		b.x = b.x + vx;
+		b.y=  b.y + vy;		
+		//draw			
+		b.Teken();
+    }
+		</script>
+
+	</head>
+
+	<body>
+
+	</body>
+</html>

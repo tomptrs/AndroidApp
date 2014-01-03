@@ -31,10 +31,10 @@ class Monitoring
 
 	}
 	
-	public function InsertUserInDB($name)
+	public function InsertUserInDB($name,$photo)
 	{
 		//INSERT INTO `gocha`.`User` (`Name`, `ID`) VALUES (\'tom\', NULL);
-		$sql = "INSERT INTO User (Name, ID) VALUES ('". $name ."', NULL)";	
+		$sql = "INSERT INTO User (Name, ID,photoURL) VALUES ('". $name ."', NULL, '".$photo."')";	
 		echo $sql;
 		$this->db->query($sql);	
 	}
