@@ -22,7 +22,7 @@
 		$user_profile = $twitter->getUserProfile();
 		//print "haha" . $user_profile->displayName;
 		echo $user_profile->displayName;
-		echo $user_profile->photoURL;
+		echo "<img src='". $user_profile->photoURL ."'> ";
 		// access user profile data
 		//echo "Ohai there! U are connected with: <b>{$twitter->id}</b><br />";
 		
