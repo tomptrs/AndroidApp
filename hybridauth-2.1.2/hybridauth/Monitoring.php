@@ -46,15 +46,15 @@ class Monitoring
 	
 	public function CheckUser($name)
 	{
-		$sql = "select count(*) from User where Name = ' " . $name . "'";
+		$sql = "select count(*) from User where Name = '" . $name . "' ";
 		echo $sql;
-		$this->db->query($sql);		
+		/*$this->db->query($sql);		
 		$line = $this->db->fetchArray();
 		if($line >0 )
 		{
 			//User in DB
 			echo "already available";
-		}
+		}*/
 	}
 	
 	
