@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project ICT 4 - Tom Peeters</title>
+    <script type='text/javascript' src='js/jquery.js'></script>
+    
+	<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+    <script type='text/javascript' src='js/jquery.presentr.js'></script>
+    <link rel='stylesheet' type='text/css' href='css/main.css' media='screen'/>
+    <link rel='stylesheet' type='text/css' href='css/trig-d3.css' media='screen'/>
+    <script type='text/javascript'>
+    
+
+
+
+    
+    $(function()    {
+        $('#slides').presentr({
+            speed: 500,
+            pageDisplay: $('#slideinfo'),
+            hashJump: true,
+            hashPrefix: 'slide',
+            slideFunctions: {
+                '4': {
+                    enter: function() { $('.slide4elements').hide(); },
+                    subslides: [
+                        function() { $('#bulletPoint1').fadeIn(); },
+                        function() { $('#bulletPoint2').fadeIn(); },
+                        function() { $('#bulletPoint3').fadeIn(); },
+                        function() { $('#codeSnippet').fadeIn(); }
+                    ],
+                    exit: function() { $('.slide4elements').hide(); }
+                },
+                '7': {
+                    enter: DEMOS.trig.start,
+                    exit: DEMOS.trig.stop
+                }
+            }
+        });
+        
+        $('#slides').bind('slide.presentr', function(e, slide, dir) {
+            log('Slide: ' + slide + ', Direction: ' + dir);
+        });
+        
+        $('#slides').bind('subslide.presentr', function(e, subslide) {
+            log('Subslide: ' + subslide);
+        });
+
+
+        function log(s) {
+            if (window.console && console.log) { console.log(s); }
+        }
+    });
+    </script>
+</head>
+<body>
+
+<div id='header'>
+    <h2 id='name'>Project ICT</h2>
+    <h3 id='title'>Introduction</h3>
+    <div id='author'>Tom Peeters</div>
+    <div id='links'><a href='https://github.com/tomptrs' title='Tom Peeters on GitHub'>GitHub</a> 
+    </div>
+</div>
+
+<div id='slideinfo'></div>
+
+<div id='slides'>
+
+<div class='slide'>
+    <h1>Ideas</h1>
+    <p><a href='https://github.com/tomptrs/ProjectICT4' title='presentr on GitHub'>info</a></p>
+
+    <p>Hit your <strong>right arrow key</strong> to begin! or <strong>swipe left or right</strong></p>
+</div>
+
+
+<div class='slide'>
+    <h1>3DGame</h1>
+    <p>Play a computer game in real life</p>
+    <pre><code>
+    	https://github.com/AP-Elektronica-ICT/AP-OAMK-3DGame</br>
+    	https://www.scrumdo.com/projects/project/ap-oamk-3dgame/
+    </code></pre>
+     <ul>
+        <li><strong>GPS</strong> design your play field </li>
+        <li><strong>GPS</strong> where am I - where is my competitor</li>
+        <li><strong>Gyroscope</strong> Attack or defend</li>
+        <li><strong>Camera</strong> detect some special moves for attack or defence</li>
+        <li><strong>Drawing Context</strong> Draw your moves in a 2d or 3d context</li>
+    </ul>
+</div>
+
+<div class='slide'>
+    <h1>Parental Control</h1>
+    <p>Make a control social network</p>
+    <pre><code>
+    	https://github.com/AP-Elektronica-ICT/AP-OAMK-ParentalControl</br>
+    	https://www.scrumdo.com/projects/project/ap-oamk-parentalcontrol
+    </code></pre>
+     <ul>
+        <li><strong>Timer</strong> Control child's use of a phone </li>
+        <li><strong>Alarm</strong> Set alarms to limit phone use</li>
+        <li><strong>Social Network</strong> Integrate social networks</li>
+        <li><strong>UI</strong> </li>
+        
+    </ul>
+</div>
+
+<div class='slide'>
+    <h1>GPS Group Pattern App</h1>
+    <p>Digital Art: Make physical patterns and draw them into your app</p>
+    <pre><code>
+    	https://github.com/AP-Elektronica-ICT/AP-OAMK-GroupPattern</br>
+    	https://www.scrumdo.com/projects/project/ap-oamk-grouppattern
+    </code></pre>
+     <ul>
+        <li><strong>Timer</strong> Control child's use of a phone </li>
+        <li><strong>Alarm</strong> Set alarms to limit phone use</li>
+        <li><strong>Social Network</strong> Integrate social networks</li>
+        <li><strong>UI</strong> </li>
+        
+    </ul>
+</div>
+
+
+
+<div class='slide'>
+    <h1>EmiconSignLanguage</h1>
+    <p>App is able to detect sign language and translates it into text</p>
+    <pre><code>
+    	https://github.com/AP-Elektronica-ICT/AP-OAMK-ParentalControl</br>
+    	https://www.scrumdo.com/projects/project/ap-oamk-parentalcontrol
+    </code></pre>
+     <ul>
+        <li><strong>Camera</strong> detect hand patterns </li>
+       
+        
+    </ul>
+</div>
+
+<div class='slide'>
+    <h1>Phrase Dictionary</h1>
+    <p>Set up your presentation by using a jQuery selector to select the element who is the parent of the slides</p>
+    <pre><code>
+    
+    <ul>
+        <li><strong>Library</strong> speed in ms of slide changes (default: 1000)</li>
+        <li><strong>Camera</strong> set this to the jQuery object(s) you'd like to update with frame info (default: null)</li>
+    </ul>
+
+</div>
+
+
+<div class='slide'>
+    <h1>Running App</h1>
+    <p>This app uses GPS to map and track your running/jogging trail. You can sign in and compete against other trainers in different kind of levels. This app keeps you motivated while striving to reach fat burning or health & wellness goals.</p>
+    <ul>
+        <li id='bulletPoint1' class='slide4elements'>Integrate social networks</li>
+        <li id='bulletPoint2' class='slide4elements'>Compete and motivate other people</li>
+        <li id='bulletPoint3' class='slide4elements'>Competition of speed, length ..</li>
+        <li id='bulletPoint3' class='slide4elements'>Personal training diary</li>
+    </ul>    
+    <pre id='codeSnippet' class='slide4elements'><code>
+    <span class='pink'>$</span><span class='blue'>(</span><span class='pink'>function</span><span class='blue'>()    {</span>
+        <span class='pink'>$</span><span class='blue'>(</span><span class='green'>'#slides'</span><span class='blue'>)</span>.presentr<span class='blue'>({</span>
+            slideFunctions: <span class='blue'>{</span>
+                <span class='green'>'4'</span>: <span class='blue'>{</span>
+                    subslides: <span class='blue'>[</span>
+                        <span class='pink'>function</span><span class='blue'>() {</span> <span class='pink'>$</span><span class='blue'>(</span><span class='green'>'#bulletPoint1'</span><span class='blue'>)</span>.fadeIn() <span class='blue'>}</span>,
+                        <span class='pink'>function</span><span class='blue'>() {</span> <span class='pink'>$</span><span class='blue'>(</span><span class='green'>'#bulletPoint2'</span><span class='blue'>)</span>.fadeIn() <span class='blue'>}</span>,
+                        <span class='pink'>function</span><span class='blue'>() {</span> <span class='pink'>$</span><span class='blue'>(</span><span class='green'>'#bulletPoint3'</span><span class='blue'>)</span>.fadeIn() <span class='blue'>}</span>,
+                        <span class='pink'>function</span><span class='blue'>() {</span> <span class='pink'>$</span><span class='blue'>(</span><span class='green'>'#codeSnippet'</span><span class='blue'>)</span>.fadeIn() <span class='blue'>}</span>,
+                    <span class='blue'>]</span>
+                <span class='blue'>}</span>
+            <span class='blue'>}</span>
+        <span class='blue'>})</span>;
+    </code></pre>
+</div>
+
+
+
+</div>
+
+<script type='text/javascript' src='js/d3.min.js'></script>
+<script type='text/javascript' src='js/trig-d3.js'></script>
+
+
+</body>
+</html>
