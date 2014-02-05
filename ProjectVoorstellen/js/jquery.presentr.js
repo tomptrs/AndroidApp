@@ -115,14 +115,17 @@
         		$( "body" ).on( "tap", swipeleftHandler );
   
 				function swipeleftHandler( event ){
+				//alert(event.pageX + " " + window.width);
 					    console.log("tap");
-					    functionCalls( DIR.RIGHT );
+						if(currentSlide < totalSlides)
+							functionCalls( DIR.RIGHT );
   				}
   				
   				$( "#slideinfo" ).on( "swiperight", swiperightHandler );
   
 				function swiperightHandler( event ){
 					    console.log("swiperight");
+						if(currentSlide < totalSlides)
 					    functionCalls(DIR.RIGHT)
   				}
         		

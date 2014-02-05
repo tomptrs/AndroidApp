@@ -21,7 +21,7 @@
             hashJump: true,
             hashPrefix: 'slide',
             slideFunctions: {
-                '4': {
+                /*'4': {
                     enter: function() { $('.slide4elements').hide(); },
                     subslides: [
                         function() { $('#bulletPoint1').fadeIn(); },
@@ -30,7 +30,7 @@
                         function() { $('#codeSnippet').fadeIn(); }
                     ],
                     exit: function() { $('.slide4elements').hide(); }
-                },
+                },*/
                 '7': {
                     enter: DEMOS.trig.start,
                     exit: DEMOS.trig.stop
@@ -76,49 +76,49 @@
 
 
 <div class='slide'>
-    <h1>3DGame</h1>
+    <h1>3D Adventure Game</h1>
     <p>Play a computer game in real life</p>
     <pre><code>
     	https://github.com/AP-Elektronica-ICT/AP-OAMK-3DGame</br>
     	https://www.scrumdo.com/projects/project/ap-oamk-3dgame/
     </code></pre>
      <ul>
-        <li><strong>GPS</strong> design your play field </li>
-        <li><strong>GPS</strong> where am I - where is my competitor</li>
-        <li><strong>Gyroscope</strong> Attack or defend</li>
-        <li><strong>Camera</strong> detect some special moves for attack or defence</li>
-        <li><strong>Drawing Context</strong> Draw your moves in a 2d or 3d context</li>
-    </ul>
-</div>
-
-<div class='slide'>
-    <h1>Parental Control</h1>
-    <p>Make a control social network</p>
-    <pre><code>
-    	https://github.com/AP-Elektronica-ICT/AP-OAMK-ParentalControl</br>
-    	https://www.scrumdo.com/projects/project/ap-oamk-parentalcontrol
-    </code></pre>
-     <ul>
-        <li><strong>Timer</strong> Control child's use of a phone </li>
-        <li><strong>Alarm</strong> Set alarms to limit phone use</li>
-        <li><strong>Social Network</strong> Integrate social networks</li>
-        <li><strong>UI</strong> </li>
+        
+        <li><strong>A player</strong> moves in the real world while the game character moves in the game world</li>
+        <li><strong>Gyroscope</strong> smartphone uses gyroscope to attack</li>
+        <li><strong>Camera</strong> detects some special moves for attack or defence</li>
+		<li><img src="../images/adventuregame.png" height="150px" width="300px"></li>
         
     </ul>
 </div>
 
 <div class='slide'>
-    <h1>GPS Group Pattern App</h1>
+    <h1>Parental Control</h1>
+    <p>social network for parents or Parental Networking</p>
+    <pre><code>
+    	https://github.com/AP-Elektronica-ICT/AP-OAMK-ParentalControl</br>
+    	https://www.scrumdo.com/projects/project/ap-oamk-parentalcontrol
+    </code></pre>
+     <ul>
+        <li><strong>APP</strong> helping parents to control childres phone usage </li>
+        <li><strong>Alarm</strong> Set alarms / notifications to limit phone use</li>
+        <li><strong>Social Network</strong> Integrate social networks</li>
+               
+    </ul>
+</div>
+
+<div class='slide'>
+    <h1>GPS Drawing Game</h1>
     <p>Digital Art: Make physical patterns and draw them into your app</p>
     <pre><code>
     	https://github.com/AP-Elektronica-ICT/AP-OAMK-GroupPattern</br>
     	https://www.scrumdo.com/projects/project/ap-oamk-grouppattern
     </code></pre>
      <ul>
-        <li><strong>Timer</strong> Control child's use of a phone </li>
-        <li><strong>Alarm</strong> Set alarms to limit phone use</li>
-        <li><strong>Social Network</strong> Integrate social networks</li>
-        <li><strong>UI</strong> </li>
+        <li><strong>GPS</strong> keeps track of the player and renders the route into a picture </li>
+        <li><strong>Points</strong> encourage people to outdoor activities</li>
+        <li><img src="../images/drawinggame.png" height="150px" width="300px"></li>
+       
         
     </ul>
 </div>
@@ -126,58 +126,59 @@
 
 
 <div class='slide'>
-    <h1>EmiconSignLanguage</h1>
+    <h1>Emotion signs recognition system</h1>
     <p>App is able to detect sign language and translates it into text</p>
     <pre><code>
     	https://github.com/AP-Elektronica-ICT/AP-OAMK-ParentalControl</br>
     	https://www.scrumdo.com/projects/project/ap-oamk-parentalcontrol
     </code></pre>
      <ul>
-        <li><strong>Camera</strong> detect hand patterns </li>
-       
-        
+        <li><strong>Recognize</strong> hand signs </li>
+		<li><strong>Translate</strong>  signs to defined descriptions </li>
+       <li><strong>Use</strong> camera for detection </li>
+        <li><strong>Especially</strong> for people with communication problems </li>
+		
     </ul>
 </div>
 
 <div class='slide'>
     <h1>Phrase Dictionary</h1>
-    <p>Set up your presentation by using a jQuery selector to select the element who is the parent of the slides</p>
+    <p></p>
     <pre><code>
+    	https://github.com/AP-Elektronica-ICT/AP-OAMK-PhraseDictionary</br>
+    	http://www.scrumdo.com/projects/project/ap-oamk-phrasedictionary/
+    </code></pre>
     
     <ul>
-        <li><strong>Library</strong> speed in ms of slide changes (default: 1000)</li>
-        <li><strong>Camera</strong> set this to the jQuery object(s) you'd like to update with frame info (default: null)</li>
+        
+		<li><img src="../images/phrase.png" height="350px" width="750px"></li>
+       
+        
     </ul>
 
 </div>
 
 
 <div class='slide'>
-    <h1>Running App</h1>
-    <p>This app uses GPS to map and track your running/jogging trail. You can sign in and compete against other trainers in different kind of levels. This app keeps you motivated while striving to reach fat burning or health & wellness goals.</p>
-    <ul>
-        <li id='bulletPoint1' class='slide4elements'>Integrate social networks</li>
-        <li id='bulletPoint2' class='slide4elements'>Compete and motivate other people</li>
-        <li id='bulletPoint3' class='slide4elements'>Competition of speed, length ..</li>
-        <li id='bulletPoint3' class='slide4elements'>Personal training diary</li>
-    </ul>    
-    <pre id='codeSnippet' class='slide4elements'><code>
-    <span class='pink'>$</span><span class='blue'>(</span><span class='pink'>function</span><span class='blue'>()    {</span>
-        <span class='pink'>$</span><span class='blue'>(</span><span class='green'>'#slides'</span><span class='blue'>)</span>.presentr<span class='blue'>({</span>
-            slideFunctions: <span class='blue'>{</span>
-                <span class='green'>'4'</span>: <span class='blue'>{</span>
-                    subslides: <span class='blue'>[</span>
-                        <span class='pink'>function</span><span class='blue'>() {</span> <span class='pink'>$</span><span class='blue'>(</span><span class='green'>'#bulletPoint1'</span><span class='blue'>)</span>.fadeIn() <span class='blue'>}</span>,
-                        <span class='pink'>function</span><span class='blue'>() {</span> <span class='pink'>$</span><span class='blue'>(</span><span class='green'>'#bulletPoint2'</span><span class='blue'>)</span>.fadeIn() <span class='blue'>}</span>,
-                        <span class='pink'>function</span><span class='blue'>() {</span> <span class='pink'>$</span><span class='blue'>(</span><span class='green'>'#bulletPoint3'</span><span class='blue'>)</span>.fadeIn() <span class='blue'>}</span>,
-                        <span class='pink'>function</span><span class='blue'>() {</span> <span class='pink'>$</span><span class='blue'>(</span><span class='green'>'#codeSnippet'</span><span class='blue'>)</span>.fadeIn() <span class='blue'>}</span>,
-                    <span class='blue'>]</span>
-                <span class='blue'>}</span>
-            <span class='blue'>}</span>
-        <span class='blue'>})</span>;
+    <h1>RunGame</h1>
+    <p>This app is a game where you compete against other people by running</p>
+    <p></p>
+    <pre><code>
+    	https://github.com/AP-Elektronica-ICT/AP-OAMK-RunGame</br>
+    	http://www.scrumdo.com/projects/project/ap-oamk-RunGame/
     </code></pre>
-</div>
+    
+    <ul>
+        
+		<li>It uses GPS to map and track running/jogging trail and tell how fast the runner is and what kind is the ground (hills etc.). 
+</li>
+<li>Potential scams are designed to prevent with acceleration sensor (in the phone)
+</li>
+       
+        
+    </ul>
 
+</div>
 
 
 </div>
